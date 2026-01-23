@@ -17,7 +17,7 @@
       backdrop-filter: blur(10px);
       max-width: 600px;
       margin: 2rem auto;
-      text-align: center; 
+      text-align: center;
     }
 
     .form-container h2 {
@@ -27,60 +27,96 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
 
+    /* LABELS */
     .form-container label {
-  display: block;       /* chaque label sur sa ligne */
-  color: #fff;          /* blanc pur */
-  font-weight: 700;     /* plus gras */
-  margin-top: 1.5rem;
-  text-align: left;     /* aligné à gauche */
-  font-size: 1rem;      /* taille lisible */
-}
+      display: block;
+      color: #fff;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      text-align: left;
+      font-size: 1rem;
+    }
 
     /* CHAMPS FORMULAIRE */
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 0.8rem;
-  margin-top: 0.5rem;
-  border: 2px solid #FAF9F6;          /* bordure blanc cassé */
-  border-radius: 12px;
-  font-size: 1rem;
-  outline: none;
-  background: #fff;                    /* fond blanc */
-  color: #6B4226;                      /* texte brun chaud */
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* léger intérieur */
-  transition: border-width 0.2s ease, box-shadow 0.2s ease;
-}
+    .form-container input,
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 2px solid #FAF9F6; /* bordure blanc cassé */
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Segoe UI', Inter, Arial, sans-serif; /* même police pour tous */
+      outline: none;
+      background: #fff; /* fond blanc */
+      color: #6B4226; /* texte brun chaud */
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: border 0.2s ease, box-shadow 0.2s ease;
+    }
 
-/* Placeholder */
-input::placeholder,
-textarea::placeholder {
-  color: #D4A373;                      /* placeholder clair et harmonieux */
-}
+    /* PLACEHOLDER */
+    .form-container input::placeholder,
+    .form-container textarea::placeholder {
+      color: #D4A373; /* placeholder harmonieux */
+    }
 
-/* Effet hover et focus */
-input:hover,
-textarea:hover,
-select:hover,
-input:focus,
-textarea:focus,
-select:focus {
- select:focus {
-    border: 3px solid #FAF9F6;          /* bordure épaissie, même couleur */
-    box-shadow: 0 0 8px rgba(107, 66, 38, 0.4); /* halo brun chaud foncé subtil */
-}
-    
+    /* EFFET HOVER / FOCUS */
+    .form-container input:hover,
+    .form-container textarea:hover,
+    .form-container select:hover,
+    .form-container input:focus,
+    .form-container textarea:focus,
+    .form-container select:focus {
+      border-width: 3px;
+      border-color: #FAF9F6; /* bordure inchangée */
+      box-shadow: 0 0 8px rgba(107, 66, 38, 0.4); /* halo brun foncé */
+    }
+
+    /* BOUTON */
+    .form-container button {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #D4A373, #B07A5A);
+      border: none;
+      border-radius: 12px;
+      color: #FAF9F6;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .form-container button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* BACK LINK */
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      color: #D4A373;
+    }
+
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .form-container {
         margin: 1rem;
         padding: 1.5rem;
       }
-      
-      button {
-    width: 50%; 
-  }
-      
+
+      .form-container button {
+        width: 50%;
+      }
     }
   </style>
 </head>
@@ -121,7 +157,7 @@ select:focus {
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="4" placeholder="Votre message (optionnel)"></textarea>
 
-      <button type="submit">S'inscrire</button>
+      <button type="submit">Envoyer ma demande</button>
     </form>
 
     <a href="index.html" class="back-btn">← Retour à l'accueil</a>
@@ -134,7 +170,7 @@ select:focus {
   <script>
     document.getElementById('signupForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Merci pour votre inscription ! Nous vous contacterons bientôt.');
+      alert('Merci pour votre demande ! Nous vous contacterons bientôt.');
       this.reset();
     });
   </script>
