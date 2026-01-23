@@ -119,11 +119,16 @@ ul li:hover {
 ========================= */
 a.button,
 button {
-  background: linear-gradient(45deg, #D4A373, #B07A5A);
-  color: #FAF9F6;
-  padding: 12px 28px;
-  border-radius: 12px;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
+  background: linear-gradient(45deg, #D4A373, #B07A5A);
+  border: none;
+  border-radius: 12px;
+  color: #FAF9F6;
+  cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
