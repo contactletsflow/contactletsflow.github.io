@@ -6,6 +6,74 @@
   <title>Contact - Let's Flow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* FORMULAIRE CONTACT */
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-container label {
+      display: block;
+      text-align: left;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #f0f0f0;
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      color: #D4A373;
+    }
+
+    @media (max-width: 768px) {
+      .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,15 +95,22 @@
 
     <form id="contactForm">
 
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      <label for="lastname">Nom :</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Votre nom" required>
+
+      <label for="firstname">Prénom :</label>
+      <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" required>
 
       <label for="email">Email :</label>
       <input type="email" id="email" name="email" placeholder="Votre email" required>
 
+      <label for="phone">Téléphone :</label>
+      <input type="tel" id="phone" name="phone" placeholder="Votre numéro" required>
+
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
 
+      <!-- BOUTON UNIFORME -->
       <button type="submit" class="button">Envoyer</button>
     </form>
 
