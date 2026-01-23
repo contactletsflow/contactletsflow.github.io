@@ -17,7 +17,7 @@
       backdrop-filter: blur(10px);
       max-width: 600px;
       margin: 2rem auto;
-      text-align: center; /* labels centrés comme avant */
+      text-align: center; 
     }
 
     .form-container h2 {
@@ -27,39 +27,34 @@
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     }
 
-    /* CHAMPS LISIBLES */
+    /* CHAMPS FORMULAIRE */
     input,
-    textarea,
-    select {
-      width: 100%;
-      padding: 0.8rem;
-      margin-top: 0.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      border-radius: 12px;
-      font-size: 1rem;
-      outline: none;
-      background: rgba(0, 0, 0, 0.4); /* fond plus foncé */
-      color: #FAF9F6;                 /* texte blanc cassé */
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2); 
+  color: #fff; 
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); 
+  transition: background 0.3s, border 0.3s;
+}
 
-    input::placeholder,
-    textarea::placeholder {
-      color: rgba(255, 255, 255, 0.7);
-    }
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
 
-    .back-btn {
-      display: block;
-      text-align: center;
-      margin-top: 1.5rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .back-btn:hover {
-      color: #D4A373;
-    }
+input:focus,
+textarea:focus,
+select:focus {
+  background: rgba(255, 255, 255, 0.3); 
+  border: 1px solid #D4A373; 
+}
 
     @media (max-width: 768px) {
       .form-container {
@@ -68,7 +63,7 @@
       }
       
       button {
-    width: 100%; /* si ton bouton était à 50 %, on le remet à 100% sur petit écran */
+    width: 50%; 
   }
       
     }
