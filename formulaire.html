@@ -44,24 +44,30 @@
       width: 100%;
       padding: 0.8rem;
       margin-top: 0.5rem;
-      border: 2px solid #FAF9F6; /* bordure blanc cassé */
+      border: 2px solid #FAF9F6;
       border-radius: 12px;
       font-size: 1rem;
-      font-family: 'Segoe UI', Inter, Arial, sans-serif; /* même police pour tous */
+      font-family: 'Segoe UI', Inter, Arial, sans-serif;
       outline: none;
-      background: #fff; /* fond blanc */
-      color: #6B4226; /* texte brun chaud */
+      background: #fff;
+      color: #6B4226;
       box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
       transition: border 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    /* OPTIONS SELECT */
+    .form-container select option {
+      color: #6B4226;
+      font-family: 'Segoe UI', Inter, Arial, sans-serif;
     }
 
     /* PLACEHOLDER */
     .form-container input::placeholder,
     .form-container textarea::placeholder {
-      color: #D4A373; /* placeholder harmonieux */
+      color: #D4A373;
     }
 
-    /* EFFET HOVER / FOCUS */
+    /* HOVER / FOCUS */
     .form-container input:hover,
     .form-container textarea:hover,
     .form-container select:hover,
@@ -69,8 +75,8 @@
     .form-container textarea:focus,
     .form-container select:focus {
       border-width: 3px;
-      border-color: #FAF9F6; /* bordure inchangée */
-      box-shadow: 0 0 8px rgba(107, 66, 38, 0.4); /* halo brun foncé */
+      border-color: #FAF9F6;
+      box-shadow: 0 0 8px rgba(107, 66, 38, 0.4);
     }
 
     /* BOUTON */
@@ -157,7 +163,7 @@
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="4" placeholder="Votre message (optionnel)"></textarea>
 
-      <button type="submit">Envoyer ma demande</button>
+      <button type="submit">S'inscrire</button>
     </form>
 
     <a href="index.html" class="back-btn">← Retour à l'accueil</a>
@@ -170,7 +176,7 @@
   <script>
     document.getElementById('signupForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Merci pour votre demande ! Nous vous contacterons bientôt.');
+      alert('Merci pour votre inscription ! Nous vous contacterons bientôt.');
       this.reset();
     });
   </script>
