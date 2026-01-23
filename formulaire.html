@@ -57,8 +57,9 @@ select:hover,
 input:focus,
 textarea:focus,
 select:focus {
-  border-width: 3px;                   /* bordure plus épaisse au focus */
-  box-shadow: 0 0 8px rgba(250, 249, 246, 0.5); /* halo blanc cassé subtil */
+ select:focus {
+    border: 3px solid #FAF9F6;          /* bordure épaissie, même couleur */
+    box-shadow: 0 0 8px rgba(107, 66, 38, 0.4); /* halo brun chaud foncé subtil */
 }
     
     @media (max-width: 768px) {
