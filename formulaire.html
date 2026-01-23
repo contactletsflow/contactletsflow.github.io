@@ -34,29 +34,33 @@ select {
   width: 100%;
   padding: 0.8rem;
   margin-top: 0.5rem;
-  border: 2px solid #D4A373;
+  border: 2px solid #D4A373;          /* couleur bordure normale */
   border-radius: 12px;
   font-size: 1rem;
   outline: none;
-  background: #fff;
-  color: #6B4226;
-  box-shadow: inset 0 2px 5px rgba(212, 163, 115, 0.2);
-  transition: border 0.3s, box-shadow 0.3s, transform 0.2s;
+  background: #fff;                    /* fond blanc */
+  color: #6B4226;                      /* texte brun chaud */
+  box-shadow: inset 0 2px 5px rgba(212, 163, 115, 0.1); /* léger intérieur */
+  transition: border-width 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Placeholder */
 input::placeholder,
 textarea::placeholder {
-  color: #A67C52;            
+  color: #A67C52;                      /* placeholder plus clair */
 }
 
+/* Effet hover et focus */
+input:hover,
+textarea:hover,
+select:hover,
 input:focus,
 textarea:focus,
 select:focus {
-  border: 2px solid #B07A5A;   
-  box-shadow: 0 0 8px rgba(176, 122, 90, 0.4); 
-  transform: scale(1.01);       
+  border-width: 3px;                   /* bordure légèrement plus épaisse */
+  box-shadow: 0 0 8px rgba(212, 163, 115, 0.4); /* halo subtil de la même couleur que la bordure */
 }
-
+    
     @media (max-width: 768px) {
       .form-container {
         margin: 1rem;
