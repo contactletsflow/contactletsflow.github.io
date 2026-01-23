@@ -66,9 +66,11 @@
         margin: 1rem;
         padding: 1.5rem;
       }
+      
       button {
-    width: 100%; 
+    width: 100%; /* si ton bouton était à 50 %, on le remet à 100% sur petit écran */
   }
+      
     }
   </style>
 </head>
@@ -107,4 +109,25 @@
       </select>
 
       <label for="message">Message :</label>
-      <textarea id="message" name="message
+      <textarea id="message" name="message" rows="4" placeholder="Votre message (optionnel)"></textarea>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+
+    <a href="index.html" class="back-btn">← Retour à l'accueil</a>
+  </section>
+
+  <footer>
+    <p>© 2026 - Let's Flow Brazil</p>
+  </footer>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Merci pour votre inscription ! Nous vous contacterons bientôt.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
