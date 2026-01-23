@@ -1,11 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <title>Formulaire d'inscription - Let's Flow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* FORMULAIRE */
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: left;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 1rem;
+      color: #fff;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #f0f0f0;
+    }
+
+    button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #D4A373, #B07A5A);
+  border: none;
+  border-radius: 12px;
+  color: #FAF9F6;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back-btn:hover {
+      color: #D4A373;
+    }
+
+    @media (max-width: 768px) {
+      .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
   <header>
@@ -17,14 +99,15 @@
   </header>
 
   <section class="form-container">
-    <h2>Inscription au Séminaire "Waves of Implantology"</h2>
+    <h2>Inscription au Séminaire<br>« Waves of Implantology »</h2>
 
     <form id="signupForm">
-      <label for="fullname">Nom complet :</label>
-      <input type="text" id="fullname" name="fullname" placeholder="Votre nom" required>
-      
-      <label for="fullname">Prénom :</label>
-      <input type="text" id="fullname" name="fullname" placeholder="Votre prénom" required>
+
+      <label for="lastname">Nom :</label>
+      <input type="text" id="lastname" name="lastname" placeholder="Votre nom" required>
+
+      <label for="firstname">Prénom :</label>
+      <input type="text" id="firstname" name="firstname" placeholder="Votre prénom" required>
 
       <label for="email">Email :</label>
       <input type="email" id="email" name="email" placeholder="Votre email" required>
@@ -34,28 +117,30 @@
 
       <label for="preferences">Préférences :</label>
       <select id="preferences" name="preferences">
-        <option value="">--Choisissez une option--</option>
-        <option value="présentiel">Présentiel</option>
+        <option value="">— Choisissez une option —</option>
+        <option value="presentiel">Présentiel</option>
         <option value="en-ligne">En ligne</option>
       </select>
 
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="4" placeholder="Votre message (optionnel)"></textarea>
+      <label for="message">Message (optionnel) :</label>
+      <textarea id="message" name="message" rows="4"
+        placeholder="Votre message"></textarea>
 
       <button type="submit">S'inscrire</button>
+
     </form>
 
     <a href="index.html" class="back-btn">← Retour à l'accueil</a>
   </section>
 
-  <footer>
+  <footer id="contact">
     <p>© 2026 - Let's Flow Brazil</p>
   </footer>
 
   <script>
-    document.getElementById('signupForm').addEventListener('submit', function(e){
+    document.getElementById('signupForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Merci pour votre inscription ! Nous vous contacterons bientôt.');
+      alert("Merci pour votre inscription ! Nous vous contacterons bientôt.");
       this.reset();
     });
   </script>
