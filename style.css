@@ -10,18 +10,32 @@
 /* =========================
    GLOBAL
 ========================= */
+html, body {
+  min-height: 100%;
+}
+
 body {
   font-family: 'Segoe UI', Inter, Arial, sans-serif;
-  background: linear-gradient(
-    135deg,
-    #FAF3E7,
-    #E6D5B8,
-    #D4A373,
-    #B07A5A
-  );
+
+  /* IMAGE DE FOND */
+  background-image: url("images/fond.jpg"); /* ⬅️ change le nom si besoin */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
   color: #FAF9F6;
   line-height: 1.6;
-  min-height: 100vh;
+  position: relative;
+}
+
+/* VOILE POUR LA LISIBILITÉ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
 }
 
 /* =========================
@@ -61,9 +75,14 @@ nav a:hover {
 ========================= */
 section {
   max-width: 1100px;
-  margin: auto;
+  margin: 40px auto;
   padding: 80px 10%;
   text-align: center;
+
+  background: rgba(250, 243, 231, 0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
 /* =========================
@@ -72,13 +91,13 @@ section {
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
 }
 
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
 }
 
 p {
@@ -103,15 +122,15 @@ ul li {
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(212, 163, 115, 0.25);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   backdrop-filter: blur(10px);
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
 }
 
 ul li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.28);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* =========================
@@ -126,7 +145,7 @@ button {
   font-weight: bold;
   background: linear-gradient(45deg, #D4A373, #B07A5A);
   border: none;
-  border-radius: 12px;
+  border-radius: 14px;
   color: #FAF9F6;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -135,24 +154,24 @@ button {
 a.button:hover,
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.35);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
 }
 
 /* =========================
-   BOUTONS RETOUR ACCUEIL
+   BOUTON RETOUR
 ========================= */
 .back-btn {
-      display: block;
-      text-align: center;
-      margin-top: 1.5rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-    }
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #FAF9F6;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    .back-btn:hover {
-      color: #D4A373;
-    }
+.back-btn:hover {
+  color: #D4A373;
+}
 
 /* =========================
    FORMULAIRES
@@ -184,6 +203,7 @@ footer {
   padding: 40px 20px;
   background: rgba(127, 85, 57, 0.7);
   color: #FAF9F6;
+  margin-top: 60px;
 }
 
 /* =========================
@@ -201,5 +221,9 @@ footer {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  section {
+    padding: 60px 8%;
   }
 }
