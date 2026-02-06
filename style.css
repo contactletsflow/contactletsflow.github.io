@@ -198,58 +198,7 @@ textarea::placeholder {
 /* =========================
    SECTION "QUI SOMMES-NOUS"
 ========================= */
-#about {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 60px 8%;
-  background: rgba(247, 236, 227, 0.85); /* clair et chaleureux */
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  line-height: 1.9;
-}
 
-#about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  text-align: center;
-  color: #3C2F2F;
-}
-
-#about p {
-  font-family: 'Lora', serif;
-  font-size: 1.15rem;
-  color: #3C2F2F;
-  margin-bottom: 25px;  /* espace entre les paragraphes */
-}
-
-#about .quote {
-  font-family: 'Playfair Display', serif;
-  color: #B07A5A; /* terracotta foncé */
-  font-style: italic;
-}
-
-#about .dream {
-  text-align: center;
-  font-size: 1.25rem;
-  margin-top: 30px;
-  color: #B07A5A;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #about {
-    padding: 40px 5%;
-  }
-
-  #about h2 {
-    font-size: 2rem;
-  }
-
-  #about p {
-    font-size: 1rem;
-  }
-}
 
 /* =========================
    FOOTER
