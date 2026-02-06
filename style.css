@@ -19,7 +19,7 @@ body {
   line-height: 1.8;
   color: #3C2F2F;
   background-color: #F7ECE3; /* fond sable clair */
-  background-image: url("../images/fond.jpg"); /* adapte selon ton chemin */
+  background-image: url("https://images/fond.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
