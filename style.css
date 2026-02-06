@@ -18,7 +18,7 @@ body {
   font-family: 'Segoe UI', Inter, Arial, sans-serif;
 
   /* IMAGE DE FOND */
-  background-image: url("contactletsflow.github.io/images/fond.jpg"); /* ⬅️ change le nom si besoin */
+  background-image: url("contactletsflow.github.io/images/fond.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
