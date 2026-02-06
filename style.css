@@ -15,18 +15,15 @@ html, body {
 }
 
 body {
-  font-family: 'Segoe UI', Inter, Arial, sans-serif;
-
-  /* IMAGE DE FOND */
-  background-image: url("https://contactletsflow.github.io/images/fond.jpg");
+  font-family: 'Lora', serif;
+  line-height: 1.8;
+  color: #3C2F2F;
+  background-color: #F7ECE3; /* fond sable clair */
+  background-image: url("images/fond.jpg"); /* change selon ton chemin */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  color: #3C2F2F;
-  background-color: #F7ECE3; /* fond sable clair + naturel */
-  line-height: 1.6;
   position: relative;
 }
 
@@ -35,7 +32,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(247, 236, 227, 0.25); /* overlay léger terracotta */
   z-index: -1;
 }
 
@@ -47,7 +44,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background: rgba(210, 150, 115, 0.55);
+  background: rgba(210, 150, 115, 0.55); /* terracotta clair */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -55,10 +52,10 @@ header {
 }
 
 header h1 {
-  font-size: 1.6rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #3C2F2F;
-  font-family: 'Playfair Display', serif;
 }
 
 nav a {
@@ -82,35 +79,36 @@ section {
   padding: 80px 10%;
   text-align: center;
 
-  background: rgba(250, 243, 231, 0.12);
+  background: rgba(247, 236, 227, 0.85); /* section claire */
   border-radius: 20px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
 /* =========================
    TITRES & TEXTE
 ========================= */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-family: 'Playfair Display', serif; 
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   color: #3C2F2F;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
 }
 
-h2 {
-  font-size: 2rem;
+h1 {
+  font-size: 2.8rem;
   margin-bottom: 20px;
-  font-family: 'Playfair Display', serif; 
-  color: #3C2F2F;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
 p {
   max-width: 700px;
   margin: auto;
-  front-family: 'Lora', serif;
+  font-size: 1.1rem;
   color: #3C2F2F;
 }
 
@@ -126,7 +124,7 @@ ul {
 }
 
 ul li {
-  background: rgba(250, 150, 115, 0.2);
+  background: rgba(210, 150, 115, 0.2);
   padding: 25px;
   border-radius: 16px;
   border: 1px solid rgba(210, 150, 115, 0.3);
@@ -138,7 +136,7 @@ ul li {
 
 ul li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
 /* =========================
@@ -150,21 +148,21 @@ button {
   padding: 1rem;
   margin-top: 1.5rem;
   font-size: 1rem;
-  font-weight: bold;
-  front-family: 'Playfair Display', serif;
-  letter-spacing: 1px; 
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
   background: linear-gradient(45deg, #D4A373, #B07A5A);
   border: none;
   border-radius: 14px;
   color: #FAF9F6;
   cursor: pointer;
+  letter-spacing: 1px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 a.button:hover,
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.3);
 }
 
 /* =========================
@@ -174,13 +172,13 @@ button:hover {
   display: block;
   text-align: center;
   margin-top: 1.5rem;
-  color: #FAF9F6;
+  color: #3C2F2F;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .back-btn:hover {
-  color: #D4A373;
+  color: #B07A5A;
 }
 
 /* =========================
@@ -214,6 +212,7 @@ footer {
   background: rgba(210, 150, 115, 0.7);
   color: #FAF9F6;
   margin-top: 60px;
+  font-family: 'Lora', serif;
 }
 
 /* =========================
@@ -226,11 +225,11 @@ footer {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   section {
