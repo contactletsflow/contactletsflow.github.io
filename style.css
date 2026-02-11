@@ -86,6 +86,16 @@ section {
 }
 
 /* =========================
+   BLOQUE "QUI SOMMES-NOUS" TEXTE UNIQUEMENT
+========================= */
+#about p {
+  max-width: none;           /* supprime la limite de 700px pour ce bloc */
+  width: 100%;               /* texte prend toute la largeur du bloc */
+  margin: 0 auto 20px auto;  /* centre chaque paragraphe et ajoute un espace en bas */
+  line-height: 1.7;          /* rend le texte plus lisible */
+}
+
+/* =========================
    TITRES & TEXTE
 ========================= */
 h1 {
@@ -100,6 +110,7 @@ h2 {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
 }
 
+/* Garde le max-width global pour les autres paragraphes */
 p {
   max-width: 700px;
   margin: auto;
@@ -225,5 +236,7 @@ footer {
 
   section {
     padding: 60px 8%;
+  }
+    width: 95%; /* texte légèrement réduit sur petits écrans */
   }
 }
