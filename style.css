@@ -101,6 +101,10 @@ section {
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
+#about h2 {
+  text-align: center;  /* titre centré */
+}
+
 #about p {
   max-width: none;           /* supprime la limite de 700px pour ce bloc */
   width: 100%;               /* texte prend toute la largeur du bloc */
