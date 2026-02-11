@@ -92,7 +92,7 @@ section {
 #about {
   max-width: 1100px;
   margin: 40px auto;
-  padding: 80px 5%;
+  padding: 80px 7%;
   text-align: left;
 
   background: rgba(250, 243, 231, 0.12);
@@ -105,7 +105,7 @@ section {
   max-width: none;           /* supprime la limite de 700px pour ce bloc */
   width: 100%;               /* texte prend toute la largeur du bloc */
   margin: 0 auto 20px auto;  /* centre chaque paragraphe et ajoute un espace en bas */
-  line-height: 1.7;          /* rend le texte plus lisible */
+  line-height: 1.5;          /* rend le texte plus lisible */
 }
 
 /* =========================
